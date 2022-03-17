@@ -27,13 +27,13 @@
 #define velo2cam_utils_H
 
 #define PCL_NO_PRECOMPILE
-#define DEBUG 0
+#define DEBUG 1
 
 #include <pcl/search/kdtree.h>
 #include <pcl/segmentation/extract_clusters.h>
 
 #define TARGET_NUM_CIRCLES 4
-#define TARGET_RADIUS 0.12
+#define TARGET_RADIUS 0.36
 #define GEOMETRY_TOLERANCE 0.06
 
 using namespace std;

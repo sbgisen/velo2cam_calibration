@@ -11,8 +11,8 @@
     <remap from="~output" to="/lidar_pattern_$(arg sensor_id)/z_filtered" />
     <rosparam>
       filter_field_name: z
-      filter_limit_min: -2
-      filter_limit_max: 1
+      filter_limit_min: -0.2
+      filter_limit_max: 0.2
       filter_limit_negative: False
       max_queue_size: 1
     </rosparam>
@@ -23,8 +23,8 @@
     <remap from="~output" to="/lidar_pattern_$(arg sensor_id)/zy_filtered" />
     <rosparam>
       filter_field_name: y
-      filter_limit_min: -100
-      filter_limit_max: 100
+      filter_limit_min: -0.2
+      filter_limit_max: 0.2
       filter_limit_negative: False
       max_queue_size: 1
     </rosparam>

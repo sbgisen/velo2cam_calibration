@@ -517,17 +517,17 @@ int main(int argc, char **argv) {
 
   string csv_name;
 
-  nh.param("delta_width_circles", delta_width_circles_, 0.5);
-  nh.param("delta_height_circles", delta_height_circles_, 0.4);
+  nh.param("delta_width_circles", delta_width_circles_, 0.150);
+  nh.param("delta_height_circles", delta_height_circles_, 0.120);
   nh_.param("plane_threshold", plane_threshold_, 0.1);
   nh_.param("gradient_threshold", gradient_threshold_, 0.1);
-  nh_.param("plane_distance_inliers", plane_distance_inliers_, 0.1);
-  nh_.param("circle_threshold", circle_threshold_, 0.05);
-  nh_.param("target_radius_tolerance", target_radius_tolerance_, 0.01);
+  nh_.param("plane_distance_inliers", plane_distance_inliers_, 0.2)
+  nh_.param("circle_threshold", circle_threshold_, 0.001);
+  nh_.param("target_radius_tolerance", target_radius_tolerance_, 0.005);
   nh_.param("cluster_tolerance", cluster_tolerance_, 0.05);
   nh_.param("min_centers_found", min_centers_found_, TARGET_NUM_CIRCLES);
   nh_.param("min_cluster_factor", min_cluster_factor_, 0.5);
-  nh_.param("rings_count", rings_count_, 64);
+  nh_.param("rings_count", rings_count_, 16);
   nh_.param("skip_warmup", skip_warmup_, false);
   nh_.param("save_to_file", save_to_file_, false);
   nh_.param("csv_name", csv_name,

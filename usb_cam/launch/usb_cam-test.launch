@@ -1,0 +1,21 @@
+<launch>
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" >
+    <param name="video_device" value="/dev/video2" />
+    <param name="image_width" value="1472" />
+    <param name="image_height" value="736" />
+    <param name="pixel_format" value="mjpeg" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="io_method" value="mmap"/>
+  </node>
+
+  <node name="image_view" pkg="image_view" type="image_view" respawn="false" >
+    <remap from="image" to="/usb_cam/image_raw"/>
+    <param name="autosize" value="true" />
+  </node>
+
+
+  <node name="sxs_stereo" pkg="side_x_side_stereo" type="side_x_side_stereo_node" respawn="false" output="screen" >
+	 <param name="input_image_topic" value="/usb_cam/image_raw" />
+  </node>
+
+</launch>
