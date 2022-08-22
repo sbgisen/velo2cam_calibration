@@ -32,4 +32,5 @@ class ZeroDistortionInfoPublisher(object):
 
 if __name__ == '__main__':
     rospy.init_node('zero_distortion_info_publisher')
+    _ = ZeroDistortionInfoPublisher()
     rospy.spin()
