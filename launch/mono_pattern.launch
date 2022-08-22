@@ -9,6 +9,11 @@
     <!-- Marker size (side) in meters -->
     <arg name="marker_size" value="0.2"/>
 
+    <node name="zero_distortion_publisher" pkg="velo2cam_calibration" type="zero_distortion_info_publisher.py" output="screen">
+      <remap from="~output" to="/insta360/rgb/front/rectify/camera_info"/>
+      <remap from="~input" to="/insta360/rgb/front/camera_info"/>
+    </node>
+
     <node pkg="velo2cam_calibration" type="mono_qr_pattern" name="mono_pattern_$(arg sensor_id)" output="$(arg stdout)">
         <param name="image_topic" value="$(arg camera_name)/$(arg image_topic)" />
         <param name="cinfo_topic" value="$(arg camera_name)/camera_info" />

@@ -22,6 +22,5 @@ srv_gen/
 *.cpp.autosave.*
 
 launch/calibrated_tf*
-scripts/
 .idea/
 .vscode/
