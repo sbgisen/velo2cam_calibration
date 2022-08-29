@@ -480,11 +480,11 @@ std:
              TARGET_NUM_CIRCLES);
   }
 
-  if (DEBUG) {
+  //if (DEBUG) {
     cv::namedWindow("out", WINDOW_NORMAL);
     cv::imshow("out", imageCopy);
     cv::waitKey(1);
-  }
+  //}
 
   // Clear cumulative cloud during warm-up phase
   if (!WARMUP_DONE) {

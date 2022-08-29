@@ -527,7 +527,7 @@ int main(int argc, char **argv) {
   nh_.param("cluster_tolerance", cluster_tolerance_, 0.05);
   nh_.param("min_centers_found", min_centers_found_, TARGET_NUM_CIRCLES);
   nh_.param("min_cluster_factor", min_cluster_factor_, 0.5);
-  nh_.param("rings_count", rings_count_, 64);
+  nh_.param("rings_count", rings_count_, 16);
   nh_.param("skip_warmup", skip_warmup_, false);
   nh_.param("save_to_file", save_to_file_, false);
   nh_.param("csv_name", csv_name,
